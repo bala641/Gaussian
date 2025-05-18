@@ -8,98 +8,16 @@ To write a program to find the solution of a matrix using Gaussian Elimination.
 2. Anaconda – Python 3.7 Installation / Moodle-Code Runner
 
 ## Algorithm
-1.  Input:
-First input: number of unknowns n
+### step 1:Input the augmented matrix of the system (coefficients + constants).
 
-Next inputs: all elements of augmented matrix (normal matrix + right-hand side).
+### step 2:Apply forward elimination to transform the matrix into upper triangular form.
 
+### step 3:Check for division by zero during elimination to avoid singularities.
 
-2. Forward Elimination (make zeros below diagonal):
-For each row:
+### step 4:Apply back substitution to solve for unknown variables starting from the last row.
 
-Divide and subtract rows to make zeros below the current row.
+### step 5:Output the values of all variables.
 
-Formula for elimination:ratio= 
-a[i][i]
-a[j][i]
-​
- 
-Row
-𝑗
-=
-Row
-𝑗
-−
-ratio
-×
-Row
-𝑖
-Row 
-j
-​
- =Row 
-j
-​
- −ratio×Row 
-i
-​
- 
-
-3.Back Substitution (find the answers):
-Start from the last unknown.
-
-Plug values backward into the earlier equations.
-
-Formula:
-
-𝑥
-[
-𝑖
-]
-=
-𝑎
-[
-𝑖
-]
-[
-𝑛
-]
-−
-∑
-𝑗
-=
-𝑖
-+
-1
-𝑛
-−
-1
-𝑎
-[
-𝑖
-]
-[
-𝑗
-]
-×
-𝑥
-[
-𝑗
-]
-𝑎
-[
-𝑖
-]
-[
-𝑖
-]
-x[i]= 
-a[i][i]
-a[i][n]−∑ 
-j=i+1
-n−1
-​
- a[i][j]×x[j]
 
 
 ## Program:
